@@ -99,10 +99,11 @@ petalLenght <- c(5.1, 1)
 petalWidth <- c(1.9, 1)
 
 # Datenframe erzeugen
+# 
 new.flowerMeasurement <- data.frame(sepalLenght, sepalWidth, petalLenght, petalWidth)
 
 # Spaltenname hinzufügen. Das Modell wurde mit den Spaltennamen erzeugt, darum müssen die
-# die neu vorherzusagenden Datensätze auch Spaltennamen haben. 
+# die neu vorherzusagenden Datensätze auch Spaltennamen haben.    
 colnames(new.flowerMeasurement) <- c("Sepal.Length","Sepal.Width", "Petal.Length", "Petal.Width") 
 
 predict(fit.lda, newdata=new.flowerMeasurement)
